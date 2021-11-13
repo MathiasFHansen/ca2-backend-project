@@ -16,14 +16,15 @@
                  but also more verbose, log-info 
                  NOTE in production the values will be set to WARNING to report only potential serious problems
             -->
+            
             <property name="eclipselink.logging.level" value="INFO"/>
             <property name="eclipselink.logging.level.sql" value="INFO"/>
             <property name="eclipselink.logging.parameters" value="true"/>
             
             <!-- In PRODUCTION the values below, will be overriden by utils.EMF_Creator -->
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/security_db"/>
-            <property name="javax.persistence.jdbc.user" value="dev"/>
-            <property name="javax.persistence.jdbc.password" value="ax2"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://46.101.123.187:3306/ca1"/>
+            <property name="javax.persistence.jdbc.user" value="mathias"/>
+            <property name="javax.persistence.jdbc.password" value="XT5XnmHUjXY4mAbz"/>
             
         </properties>
     </persistence-unit>
@@ -38,9 +39,9 @@
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
             <property name="eclipselink.canonicalmodel.subpackage" value="ghy636765"/>
-            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/security_test"/>
-            <property name="javax.persistence.jdbc.user" value="dev"/>
-            <property name="javax.persistence.jdbc.password" value="ax2"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://46.101.123.187:3306/ca1_test"/>
+            <property name="javax.persistence.jdbc.user" value="mathias"/>
+            <property name="javax.persistence.jdbc.password" value="XT5XnmHUjXY4mAbz"/>
             <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
             
              <!-- You can raise the logging level to one of the following values CONFIG, FINE, FINER, FINEST, ALL for better,
