@@ -8,11 +8,13 @@ public class OurDTO {
     private String name;
     private String gender;
     private String probability;
+    private String randomFact;
+    private String catImageUrl;
 
     public OurDTO() {
     }
 
-    public OurDTO(BoredDTO boredDTO, CatDTO catDTO, DogDTO dogDTO, GenderizeDTO genderizeDTO) {
+    public OurDTO(BoredDTO boredDTO, CatDTO catDTO, DogDTO dogDTO, GenderizeDTO genderizeDTO, CatImageDTO catImageDTO, RandomFactDTO randomFactDTO) {
         this.activity = boredDTO.getActivity();
         this.type = boredDTO.getType();
         this.fact = catDTO.getFact();
@@ -20,6 +22,8 @@ public class OurDTO {
         this.name = genderizeDTO.getName();
         this.gender = genderizeDTO.getGender();
         this.probability = genderizeDTO.getProbability();
+        this.catImageUrl = catImageDTO.getCatImageUrl();
+        this.randomFact = randomFactDTO.getFact();
     }
 
     public String getActivity() {
