@@ -1,14 +1,14 @@
 package dtos;
 
 public class RandomFactDTO {
-    String fact;
+    String text;
 
     public RandomFactDTO() {
     }
 
-    public RandomFactDTO(String fact) { this.fact = fact; }
+    public RandomFactDTO(String fact) { this.text = fact; }
 
-    public String getFact() { return fact; }
+    public String getText() { return text; }
 
-    public void setFact(String fact) { this.fact = fact; }
+    public void setText(String text) { this.text = text; }
 }

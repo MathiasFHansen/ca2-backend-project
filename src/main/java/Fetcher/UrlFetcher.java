@@ -66,16 +66,16 @@ public class UrlFetcher {
         }
     }
 
-    static class PingCatImage implements Callable<CatImageDTO> {
+    static class PingGeekJoke implements Callable<GeekJokeDTO> {
         String url;
-        PingCatImage(String url) {
+        PingGeekJoke(String url) {
             this.url = url;
         }
         @Override
-        public CatImageDTO call() throws Exception {
-            String catImageUrl = HttpUtils.fetchData(url);
-            CatImageDTO catImageDTO = gson.fromJson(catImageUrl, CatImageDTO.class);
-            return catImageDTO;
+        public GeekJokeDTO call() throws Exception {
+            String geekJoke = HttpUtils.fetchData(url);
+            GeekJokeDTO geekJokeDTO = gson.fromJson(geekJoke, GeekJokeDTO.class);
+            return geekJokeDTO;
         }
     }
 
@@ -99,17 +99,17 @@ public class UrlFetcher {
         urls.add("https://catfact.ninja/fact");
         urls.add("https://dog.ceo/api/breeds/image/random");
         urls.add("https://api.genderize.io/?name=luc");
-        urls.add("https://thatcopy.pw/catapi/");
+        urls.add("https://geek-jokes.sameerkumar.website/api?format=json");
         urls.add("https://uselessfacts.jsph.pl/random.json?language=en");
 
         Future future1 = executor.submit(new PingBored(urls.get(0)));
         Future future2 = executor.submit(new PingCat(urls.get(1)));
         Future future3 = executor.submit(new PingDog(urls.get(2)));
         Future future4 = executor.submit(new PingGenderized(urls.get(3)));
-        Future future5 = executor.submit(new PingCatImage(urls.get(4)));
+        Future future5 = executor.submit(new PingGeekJoke(urls.get(4)));
         Future future6 = executor.submit(new PingRandomFact(urls.get(5)));
 
-        OurDTO jokes = new OurDTO((BoredDTO) future1.get(), (CatDTO) future2.get(), (DogDTO) future3.get(), (GenderizeDTO) future4.get(), (CatImageDTO) future5.get(), (RandomFactDTO) future6.get());
+        OurDTO jokes = new OurDTO((BoredDTO) future1.get(), (CatDTO) future2.get(), (DogDTO) future3.get(), (GenderizeDTO) future4.get(), (GeekJokeDTO) future5.get(), (RandomFactDTO) future6.get());
 
         return jokes;
     }
