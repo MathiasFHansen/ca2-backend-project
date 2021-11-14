@@ -27,7 +27,7 @@ jobs:
       #     mysql -e 'CREATE DATABASE ${{ env.DB_DATABASE }};' -u${{ env.DB_USER }} -p${{ env.DB_PASSWORD }}
       # - name: setup mysql
         # run: |
-        #   mysql -u root -e "CREATE User 'dev'@'localhost' IDENTIFIED BY 'ax2'; GRANT ALL PRIVILEGES ON *.* TO 'dev'@'localhost' WITH GRANT OPTION;"
+        #   mysql -u root -e "CREATE User 'dev'@'localhost' IDENTIFIED BY 'ax2'; GRANT ALL PRIVILEGES ON . TO 'dev'@'localhost' WITH GRANT OPTION;"
         #   mysql -u dev -pax2 -e "CREATE DATABASE IF NOT EXISTS security_test;"
         # run: mysql -h 127.0.0.1 --port 8888 -u dev -pax2 -e 'CREATE DATABASE IF NOT EXISTS security_test;'
       - name: mysql
