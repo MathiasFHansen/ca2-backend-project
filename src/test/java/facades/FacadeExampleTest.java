@@ -19,7 +19,7 @@ public class FacadeExampleTest {
 
     private static EntityManagerFactory emf;
     private static UserFacade facade;
-    
+
 
     public FacadeExampleTest() {
     }
