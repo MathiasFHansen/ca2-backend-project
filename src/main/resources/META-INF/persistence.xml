@@ -46,7 +46,7 @@
 
             <!-- You can raise the logging level to one of the following values CONFIG, FINE, FINER, FINEST, ALL for better,
                 but also more verbose, log-info -->
-            
+
             <property name="eclipselink.logging.level" value="INFO"/>
             <property name="eclipselink.logging.level.sql" value="INFO"/>
             <property name="eclipselink.logging.parameters" value="true"/>
