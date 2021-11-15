@@ -108,7 +108,6 @@ public class UrlFetcher {
         Future future4 = executor.submit(new PingGenderized(urls.get(3)));
         Future future5 = executor.submit(new PingGeekJoke(urls.get(4)));
         Future future6 = executor.submit(new PingRandomFact(urls.get(5)));
-        
 
         OurDTO jokes = new OurDTO((BoredDTO) future1.get(), (CatDTO) future2.get(), (DogDTO) future3.get(), (GenderizeDTO) future4.get(), (GeekJokeDTO) future5.get(), (RandomFactDTO) future6.get());
 
